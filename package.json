@@ -31,7 +31,7 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.43.2",
+    "@raycast/api": "^1.50.0",
     "@types/nanoid": "^3.0.0",
     "nanoid": "^4.0.2"
   },
