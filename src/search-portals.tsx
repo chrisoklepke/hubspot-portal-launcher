@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { nanoid } from "nanoid";
-import { ActionPanel, Action, Icon, List, LocalStorage, environment } from "@raycast/api";
+import { ActionPanel, Action, Icon, List, LocalStorage } from "@raycast/api";
 import { Portal, PortalType, Filter } from "./types";
 import { CreatePortalAction, DeletePortalAction, EmptyView, OpenPortalAction } from "./components";
 import { portalTypeIcons } from "./utils";
