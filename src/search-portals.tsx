@@ -14,26 +14,6 @@ type State = {
 };
 
 export default function Command() {
-  // Log Portals for debugging
-  if (environment.isDevelopment) {
-    logPortalsLocalStorage();
-  }
-  async function logPortalsLocalStorage() {
-    const portals = await getPortalsFromLocalStorage();
-    console.log(portals);
-  }
-
-  async function getPortalsFromLocalStorage() {
-    return new Promise((resolve, reject) => {
-      try {
-        const portals = LocalStorage.getItem<string>("portals");
-        resolve(portals);
-      } catch (error) {
-        reject(error);
-      }
-    });
-  }
-
   const [state, setState] = useState<State>({
     filter: Filter.All,
     isLoading: true,
