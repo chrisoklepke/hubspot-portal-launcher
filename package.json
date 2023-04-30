@@ -5,6 +5,7 @@
   "description": "A simple Raycast extension that allows you to quickly launch and navigate to different objects in your HubSpot portals",
   "icon": "hubspot-icon.png",
   "author": "chriso",
+  "access": "public",
   "categories": [
     "Productivity",
     "Applications"
