@@ -44,6 +44,7 @@ function CreatePortalForm(props: {
         id="portalName"
         defaultValue={defaultPortalName}
         title="Portal Name"
+        placeholder="Sterling Cooper"
         error={nameError}
         onChange={dropPortalNameErrorIfNeeded}
         onBlur={(event) => {
@@ -57,6 +58,7 @@ function CreatePortalForm(props: {
       <Form.TextField
         id="portalId"
         title="Portal ID"
+        placeholder="12345678"
         error={idError}
         onChange={dropPortalIdErrorIfNeeded}
         onBlur={(event) => {

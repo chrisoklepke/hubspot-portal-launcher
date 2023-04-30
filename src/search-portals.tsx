@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { nanoid } from "nanoid";
-import { ActionPanel, Action, Icon, List, LocalStorage, environment } from "@raycast/api";
+import { ActionPanel, Action, Icon, List, LocalStorage } from "@raycast/api";
 import { Portal, PortalType, Filter } from "./types";
 import { CreatePortalAction, DeletePortalAction, EmptyView, OpenPortalAction } from "./components";
 import { portalTypeIcons } from "./utils";
@@ -14,26 +14,6 @@ type State = {
 };
 
 export default function Command() {
-  // Log Portals for debugging
-  if (environment.isDevelopment) {
-    logPortalsLocalStorage();
-  }
-  async function logPortalsLocalStorage() {
-    const portals = await getPortalsFromLocalStorage();
-    console.log(portals);
-  }
-
-  async function getPortalsFromLocalStorage() {
-    return new Promise((resolve, reject) => {
-      try {
-        const portals = LocalStorage.getItem<string>("portals");
-        resolve(portals);
-      } catch (error) {
-        reject(error);
-      }
-    });
-  }
-
   const [state, setState] = useState<State>({
     filter: Filter.All,
     isLoading: true,

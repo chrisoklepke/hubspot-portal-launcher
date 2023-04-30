@@ -89,11 +89,11 @@ export default function Command() {
         </ActionPanel>
       }
     >
+      <Form.Description text="Choose a file to import. Make sure it is a valid JSON file according to the documentation in the Raycast Store or on GitHub." />
       <Form.FilePicker
         title="Import File"
         allowMultipleSelection={false}
         canChooseDirectories={false}
-        info="Choose a file to import. Make sure it is a valid JSON file. Read the documentation for more information."
         id="importFile"
         error={fileError}
         onChange={dropFileErrorIfNeeded}
